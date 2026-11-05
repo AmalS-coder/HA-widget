@@ -1,0 +1,51 @@
+:root {
+  font-family: 'Avenir Next', Avenir, 'Segoe UI', sans-serif;
+  color: #18232a;
+  background: #f4f6f7;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --surface: #fff;
+  --border-default: #e1e6e9;
+  --surface-strong: #f0f3f5;
+  --text-primary: #18232a;
+  --text-secondary: #414e57;
+  --text-tertiary: #5d6b75;
+  --success: #107e3e;
+  --success-surface: #f1fdf6;
+  --info: #0a6ed1;
+  --warning: #a06500;
+  --warning-surface: #fff9eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 280px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+.app-shell {
+  display: grid;
+  min-height: 100svh;
+  place-items: center;
+  padding: 24px 16px;
+}
