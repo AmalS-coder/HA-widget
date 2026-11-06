@@ -86,7 +86,7 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
 
 .phase__steps {
@@ -129,21 +129,10 @@
   line-height: 16px;
 }
 
-.pair-diagram__standby-link,
-.pair-diagram__traffic-link {
+.pair-link {
   position: absolute;
   top: 0;
   left: 0;
-  width: 24px;
-  height: auto;
-}
-
-.pair-diagram__standby-link {
-  height: 194px;
-}
-
-.pair-diagram__traffic-link {
-  height: 83px;
 }
 
 .device {
@@ -174,7 +163,7 @@
   height: 84px;
 }
 
-.device--a .device__drawing {
+.device--floor .device__drawing {
   left: -10px;
   width: 132px;
 }
@@ -193,7 +182,8 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 3px;
-  white-space: nowrap;
+  right: 0;
+  overflow-wrap: anywhere;
 }
 
 .node-details--a {
@@ -219,6 +209,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  flex-wrap: wrap;
 }
 
 .node-name {
@@ -258,8 +249,19 @@
   color: var(--info);
 }
 
+.node-details .node-status--rebooting,
+.node-details .node-status--offline,
+.phase__step.failed {
+  color: var(--danger);
+}
+
+.phase__step.failed {
+  background: var(--danger);
+}
+
 .update-progress {
   width: 120px;
+  max-width: 100%;
   height: 4px;
   overflow: hidden;
   border-radius: 2px;
@@ -302,6 +304,183 @@
   height: 7px;
 }
 
-.legend-item__dot--offline {
-  object-fit: cover;
+.ha-card__body[hidden],
+.cluster-body[hidden] {
+  display: none;
+}
+
+.cluster-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cluster-item {
+  border: 1px solid var(--border-default);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cluster-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 10px;
+  border: 0;
+  background: var(--surface);
+  color: var(--text-primary);
+  text-align: left;
+  cursor: pointer;
+}
+
+.cluster-header:hover,
+.collapse-button:hover {
+  background: #f8fafb;
+}
+
+.cluster-header:focus-visible {
+  outline: 2px solid var(--info);
+  outline-offset: -2px;
+}
+
+.cluster-chevron {
+  flex: 0 0 14px;
+  width: 14px;
+  height: 14px;
+  transform: rotate(-90deg);
+}
+
+.cluster-header.is-expanded .cluster-chevron {
+  transform: none;
+}
+
+.cluster-header__text {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 12px;
+  line-height: 16px;
+  overflow-wrap: anywhere;
+}
+
+.cluster-header__text strong {
+  font-weight: 500;
+}
+
+.cluster-header__text > span {
+  color: var(--text-secondary);
+}
+
+.cluster-header.is-expanded .cluster-header__text > span {
+  color: var(--info);
+}
+
+.compact-statuses,
+.compact-statuses > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--text-tertiary);
+}
+
+.compact-statuses {
+  flex-shrink: 0;
+  gap: 6px;
+}
+
+.compact-statuses img {
+  max-width: 8px;
+  max-height: 8px;
+}
+
+.cluster-step {
+  padding: 0 10px 8px;
+}
+
+.pair-diagram--compact {
+  width: calc(100% - 22px);
+  height: 210px;
+  margin-left: 22px;
+}
+
+.pair-diagram--compact .device {
+  transform: scale(0.8);
+  transform-origin: top left;
+}
+
+.pair-diagram--compact .device--b {
+  top: 116px;
+}
+
+.pair-diagram--compact .node-details {
+  left: 118px;
+}
+
+.pair-diagram--compact .node-details--a {
+  top: 30px;
+}
+
+.pair-diagram--compact .node-details--b {
+  top: 122px;
+}
+
+.pair-diagram--compact .update-progress {
+  width: 100px;
+}
+
+.pair-diagram--compact .pair-link--traffic-b {
+  transform: scaleY(0.9133);
+  transform-origin: top;
+}
+
+.request-state {
+  font-size: 12px;
+  line-height: 18px;
+  overflow-wrap: anywhere;
+}
+
+.request-state h1 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.request-state button {
+  align-self: flex-start;
+  padding: 6px 12px;
+  border: 1px solid var(--border-default);
+  border-radius: 5px;
+  background: var(--surface);
+  cursor: pointer;
+}
+
+@media (max-width: 319px) {
+  .node-details {
+    left: 128px;
+  }
+
+  .pair-diagram,
+  .pair-diagram--compact {
+    height: 300px;
+  }
+
+  .device--b,
+  .pair-diagram--compact .device--b {
+    top: 170px;
+  }
+
+  .node-details--b,
+  .pair-diagram--compact .node-details--b {
+    top: 170px;
+  }
+
+  .pair-link--standby-b,
+  .pair-link--traffic-b {
+    transform: scaleY(1.19);
+    transform-origin: top;
+  }
 }

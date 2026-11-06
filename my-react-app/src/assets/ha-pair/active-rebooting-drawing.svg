@@ -1,0 +1,21 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="132" height="84" viewBox="0 0 132 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Drawing">
+<g id="Active floor">
+<path id="Floor" d="M66 18L130 50L66 82L2 50L66 18Z" fill="#DCFCE9" stroke="#CFE7D7" stroke-linejoin="round"/>
+</g>
+<path id="left" d="M14 30L66 56V76L14 50V30Z" fill="#F7F9FA" stroke="#C9D1D6" stroke-linejoin="round"/>
+<path id="right" d="M66 56L118 30V50L66 76V56Z" fill="#F0F3F5" stroke="#C9D1D6" stroke-linejoin="round"/>
+<path id="top" d="M66 4L118 30L66 56L14 30L66 4Z" fill="#F7F9FA" stroke="#C9D1D6" stroke-linejoin="round"/>
+<path id="screw" d="M66 10.2C66.6627 10.2 67.2 9.66274 67.2 9C67.2 8.33726 66.6627 7.8 66 7.8C65.3373 7.8 64.8 8.33726 64.8 9C64.8 9.66274 65.3373 10.2 66 10.2Z" fill="#C9D1D6"/>
+<path id="screw_2" d="M109 31.2C109.663 31.2 110.2 30.6627 110.2 30C110.2 29.3373 109.663 28.8 109 28.8C108.337 28.8 107.8 29.3373 107.8 30C107.8 30.6627 108.337 31.2 109 31.2Z" fill="#C9D1D6"/>
+<path id="screw_3" d="M66 52.2C66.6627 52.2 67.2 51.6627 67.2 51C67.2 50.3373 66.6627 49.8 66 49.8C65.3373 49.8 64.8 50.3373 64.8 51C64.8 51.6627 65.3373 52.2 66 52.2Z" fill="#C9D1D6"/>
+<path id="screw_4" d="M23 31.2C23.6627 31.2 24.2 30.6627 24.2 30C24.2 29.3373 23.6627 28.8 23 28.8C22.3373 28.8 21.8 29.3373 21.8 30C21.8 30.6627 22.3373 31.2 23 31.2Z" fill="#C9D1D6"/>
+<path id="vent" d="M22 40V46" stroke="#C9D1D6"/>
+<path id="vent_2" d="M25 41.5V47.5" stroke="#C9D1D6"/>
+<path id="vent_3" d="M28 43V49" stroke="#C9D1D6"/>
+<path id="vent_4" d="M31 44.5V50.5" stroke="#C9D1D6"/>
+<path id="led1" d="M93.9998 50.7996C94.6625 50.7996 95.1999 51.3372 95.2 51.9998C95.2 52.6625 94.6625 53.2 93.9998 53.2C93.3372 53.1999 92.7996 52.6625 92.7996 51.9998C92.7997 51.3372 93.3372 50.7997 93.9998 50.7996Z" fill="white" stroke="#D1242F" stroke-width="1.2"/>
+<path id="led2" d="M98.9998 48.2996C99.6625 48.2996 100.2 48.8372 100.2 49.4998C100.2 50.1625 99.6625 50.7 98.9998 50.7C98.3372 50.6999 97.7996 50.1625 97.7996 49.4998C97.7997 48.8372 98.3372 48.2997 98.9998 48.2996Z" fill="white" stroke="#D1242F" stroke-width="1.2"/>
+<path id="led3" d="M104 45.7996C104.662 45.7996 105.2 46.3372 105.2 46.9998C105.2 47.6625 104.663 48.2 104 48.2C103.337 48.1999 102.8 47.6625 102.8 46.9998C102.8 46.3372 103.337 45.7997 104 45.7996Z" fill="white" stroke="#D1242F" stroke-width="1.2"/>
+</g>
+</svg>
